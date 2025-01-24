@@ -55,6 +55,7 @@ int main() {
     double area2 = 975.63;
     double pib2 = 56678.23;
     int pontos2 = 3;
+    double diferenca;
 
     printf("## Cadastro de cartas SuperTrunfo ##\n");
     
@@ -152,21 +153,39 @@ int main() {
     printf("PIB: R$%.2lf\n", pib2);
     printf("Pontos turísticos: %d\n", pontos2);
 
-    if(pib > pib2){
-        printf("O país %s tem o maior PIB", nome);
+    printf("#######################################\n");
+    printf("Comparação de características das cartas\n");
+    printf("#######################################\n");
+
+    print("#Comparação de densidade populacional#\n");
+
+    if(populacao > populacao2){
+        printf("A cidade %s tem mais densidade populacional\n", cidade);
+    }else if (populacao2 > populacao) {
+        printf("A cidade %s tem mais densidade populacional\n", cidade2);
     } else {
-        printf("O país %s tem o maior PIB", nome2);
+        printf("As duas cidades tem a mesma densidade populacional\n");
     }
 
-    if(area > area2){
-        printf("O país %.2lf tem maior extensão territoríal em comparação com %.2lf", area, area2);
-    }else
-        printf("O país %.2lf tem maior extenção territorial em comparação com %.2lf", area2, area);
+    printf("#Comparação de PIB#\n");
 
-    if(pontos > pontos2){
-        printf("A cidade %s tem mais pontos turísticos", pontos);
-    }else {
-        printf("A cidade %s tem mais pontos turísticos do que %s", pontos2, pontos);
-    }    
-    return 0;
+    if(pib > pib2){
+        printf("O país %s tem o maior PIB\n", nome);
+    } else if (pib2 > pib) {
+        printf("O país %s tem o maior PIB\n", nome2);
+    } else {
+        printf("Os dois países tem o mesmo PIB\n");
+    }
+    
+    printf("#Maior extenção territorial#\n");
+
+    if (area > area2) {
+    printf("O país %s, com %.2lf km², tem maior extensão territorial que %s, com %.2lf km².\n", nome, area, nome2, area2);
+} else if (area2 > area) {
+    printf("O país %s, com %.2lf km², tem maior extensão territorial que %s, com %.2lf km².\n", nome2, area2, nome, area);
+} else {
+    printf("Os países %s e %s possuem a mesma extensão territorial: %.2lf km².\n", nome, nome2, area);
+}
+
+return 0;
 }
