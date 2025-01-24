@@ -39,153 +39,158 @@ int main() {
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
-    char letra = 'A';
-    int numero = 1;
-    char nome[20] = "Brasil";
-    char cidade[20] = "Rio de Janeiro";
-    int populacao = 200000000;
-    double area = 875.63;
-    double pib = 53078.23;
-    int pontos = 2;
-    char letra2 = 'A';
-    int numero2 = 2;
-    char nome2[20] = "China";
-    char cidade2[20] = "Xangai";
-    int populacao2 = 1000000000;
-    double area2 = 975.63;
-    double pib2 = 56678.23;
-    int pontos2 = 3;
-    double diferenca;
+    
+    char letra, letra2;
+    int numero, numero2;
+    char nome[50], nome2[50];
+    char cidade[50], cidade2[50];
+    int populacao, populacao2;
+    double area, area2, pib, pib2;
+    int pontos, pontos2;
+    int scoreCarta1 = 0, scoreCarta2 = 0;
 
     printf("## Cadastro de cartas SuperTrunfo ##\n");
-    
-    //Coleta de dados para cadastro da primeira carta.
-    printf("Insira uma letra para o código da nova carta\n");
-    scanf("%c", &letra);
 
-    printf("Insira um número para o código da nova carta\n");
+    // Cadastro da primeira carta
+    printf("Insira uma letra para o código da nova carta: ");
+    scanf(" %c", &letra);
+
+    printf("Insira um número para o código da nova carta: ");
     scanf(" %d", &numero);
-    printf("Código cadastrado com sucesso!\n");
-    
-    printf("Insira o nome do país\n");
-    scanf(" %s", nome);
-    printf("País cadastrado com sucesso!\n"); 
 
-    printf("Insira o nome da Cidade\n");
-    scanf(" %s", cidade);
-    printf("Cidade cadastrada com sucesso!\n");       
+    printf("Insira o nome do país: ");
+    scanf(" %[^\n]", nome); // Permite entrada com espaços
 
-    printf("Insira o número de população desta cidade\n");
+    printf("Insira o nome da cidade: ");
+    scanf(" %[^\n]", cidade); // Permite entrada com espaços
+
+    printf("Insira o número de população desta cidade: ");
     scanf("%d", &populacao);
-    printf("População cadastrada com sucesso!\n");
 
-    printf("Insira a extensão territorial deste país\n");
+    printf("Insira a extensão territorial deste país (em km²): ");
     scanf("%lf", &area);
-    printf("Extensão territorial cadastrada com sucesso!\n");
 
-    printf("Insira o PIB da cidade\n");
+    printf("Insira o PIB da cidade (em milhões): ");
     scanf("%lf", &pib);
-    printf("PIB cadastrado com sucesso!\n");
 
-    printf("Insira a quantidade de pontos turísticos desta cidade\n");
+    printf("Insira a quantidade de pontos turísticos desta cidade: ");
     scanf("%d", &pontos);
-    printf("Todos os seus dados foram cadastrados\n");
-    
-    printf("#########################################\n");
-    printf("#########################################\n");
 
-    //Apresentação dos dados da nova carta cadastrada.
-    printf("\n## Nova carta cadastrada! ##\n");
+    printf("\nTodos os dados da primeira carta foram cadastrados com sucesso!\n");
+
+    // Apresentação dos dados da primeira carta
+    printf("\n## Dados da primeira carta cadastrada ##\n");
     printf("Código da carta: %c%d\n", letra, numero);
     printf("País: %s\n", nome);
     printf("Cidade: %s\n", cidade);
     printf("População: %d\n", populacao);
     printf("Extensão territorial: %.2lf km²\n", area);
-    printf("PIB: R$%.2lf\n", pib);
+    printf("PIB: R$%.2lf milhões\n", pib);
     printf("Pontos turísticos: %d\n", pontos);
 
-    printf("#############################################\n");
-    printf("Cadastro de informações para a segunda Carta\n");
-    printf("#############################################\n");
+    printf("\n#########################################\n");
 
-    //Coleta de dados para cadastro da segunda carta.
-    printf("Insira uma letra para o código da nova carta\n");
+    // Cadastro da segunda carta
+    printf("\n## Cadastro da segunda carta ##\n");
+    printf("Insira uma letra para o código da nova carta: ");
     scanf(" %c", &letra2);
 
-    printf("Insira um número para o código da nova carta\n");
+    printf("Insira um número para o código da nova carta: ");
     scanf(" %d", &numero2);
-    printf("Código cadastrado com sucesso!\n");
-    
-    printf("Insira o nome do país\n");
-    scanf(" %s", nome2);
-    printf("País cadastrado com sucesso!\n"); 
 
-    printf("Insira o nome da Cidade\n");
-    scanf(" %s", cidade2);
-    printf("Cidade cadastrada com sucesso!\n");       
+    printf("Insira o nome do país: ");
+    scanf(" %[^\n]", nome2); // Permite entrada com espaços
 
-    printf("Insira o número de população desta cidade\n");
+    printf("Insira o nome da cidade: ");
+    scanf(" %[^\n]", cidade2); // Permite entrada com espaços
+
+    printf("Insira o número de população desta cidade: ");
     scanf("%d", &populacao2);
-    printf("População cadastrada com sucesso!\n");
 
-    printf("Insira a extensão territorial deste país\n");
+    printf("Insira a extensão territorial deste país (em km²): ");
     scanf("%lf", &area2);
-    printf("Extensão territorial cadastrada com sucesso!\n");
 
-    printf("Insira o PIB da cidade\n");
+    printf("Insira o PIB da cidade (em milhões): ");
     scanf("%lf", &pib2);
-    printf("PIB cadastrado com sucesso!\n");
 
-    printf("Insira a quantidade de pontos turísticos desta cidade\n");
+    printf("Insira a quantidade de pontos turísticos desta cidade: ");
     scanf("%d", &pontos2);
-        
-    printf("#########################################\n");
-    printf("Todos os seus dados foram cadastrados\n");
-    printf("#########################################\n");
 
-    //Apresentação dos dados da nova carta cadastrada.
-    printf("\n## Dados da segunda carta cadastrada! ##\n");
+    printf("\nTodos os dados da segunda carta foram cadastrados com sucesso!\n");
+
+    // Apresentação dos dados da segunda carta
+    printf("\n## Dados da segunda carta cadastrada ##\n");
     printf("Código da carta: %c%d\n", letra2, numero2);
     printf("País: %s\n", nome2);
     printf("Cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
     printf("Extensão territorial: %.2lf km²\n", area2);
-    printf("PIB: R$%.2lf\n", pib2);
+    printf("PIB: R$%.2lf milhões\n", pib2);
     printf("Pontos turísticos: %d\n", pontos2);
 
-    printf("#######################################\n");
-    printf("Comparação de características das cartas\n");
-    printf("#######################################\n");
+    printf("\n#########################################\n");
 
-    print("#Comparação de densidade populacional#\n");
+    // Comparação das cartas
+    printf("\n## Comparação das características das cartas ##\n");
 
-    if(populacao > populacao2){
-        printf("A cidade %s tem mais densidade populacional\n", cidade);
-    }else if (populacao2 > populacao) {
-        printf("A cidade %s tem mais densidade populacional\n", cidade2);
+    // Comparação de população
+    printf("\n# Comparação de População #\n");
+    if (populacao > populacao2) {
+        printf("A cidade %s tem maior população.\n", cidade);
+        scoreCarta1++;
+    } else if (populacao2 > populacao) {
+        printf("A cidade %s tem maior população.\n", cidade2);
+        scoreCarta2++;
     } else {
-        printf("As duas cidades tem a mesma densidade populacional\n");
+        printf("As duas cidades possuem a mesma população.\n");
     }
 
-    printf("#Comparação de PIB#\n");
-
-    if(pib > pib2){
-        printf("O país %s tem o maior PIB\n", nome);
-    } else if (pib2 > pib) {
-        printf("O país %s tem o maior PIB\n", nome2);
-    } else {
-        printf("Os dois países tem o mesmo PIB\n");
-    }
-    
-    printf("#Maior extenção territorial#\n");
-
+    // Comparação de área
+    printf("\n# Comparação de Extensão Territorial #\n");
     if (area > area2) {
-    printf("O país %s, com %.2lf km², tem maior extensão territorial que %s, com %.2lf km².\n", nome, area, nome2, area2);
-} else if (area2 > area) {
-    printf("O país %s, com %.2lf km², tem maior extensão territorial que %s, com %.2lf km².\n", nome2, area2, nome, area);
-} else {
-    printf("Os países %s e %s possuem a mesma extensão territorial: %.2lf km².\n", nome, nome2, area);
-}
+        printf("O país %s tem maior extensão territorial.\n", nome);
+        scoreCarta1++;
+    } else if (area2 > area) {
+        printf("O país %s tem maior extensão territorial.\n", nome2);
+        scoreCarta2++;
+    } else {
+        printf("Os dois países possuem a mesma extensão territorial.\n");
+    }
+
+    // Comparação de PIB
+    printf("\n# Comparação de PIB #\n");
+    if (pib > pib2) {
+        printf("A cidade %s tem maior PIB.\n", cidade);
+        scoreCarta1++;
+    } else if (pib2 > pib) {
+        printf("A cidade %s tem maior PIB.\n", cidade2);
+        scoreCarta2++;
+    } else {
+        printf("As duas cidades possuem o mesmo PIB.\n");
+    }
+
+    // Comparação de pontos turísticos
+    printf("\n# Comparação de Pontos Turísticos #\n");
+    if (pontos > pontos2) {
+        printf("A cidade %s tem mais pontos turísticos.\n", cidade);
+        scoreCarta1++;
+    } else if (pontos2 > pontos) {
+        printf("A cidade %s tem mais pontos turísticos.\n", cidade2);
+        scoreCarta2++;
+    } else {
+        printf("As duas cidades possuem a mesma quantidade de pontos turísticos.\n");
+    }
+
+    // Declaração da carta vencedora
+    printf("\n#########################################\n");
+    if (scoreCarta1 > scoreCarta2) {
+        printf("A carta vencedora é a primeira (%c%d - %s, %s) com %d pontos!\n", letra, numero, nome, cidade, scoreCarta1);
+    } else if (scoreCarta2 > scoreCarta1) {
+        printf("A carta vencedora é a segunda (%c%d - %s, %s) com %d pontos!\n", letra2, numero2, nome2, cidade2, scoreCarta2);
+    } else {
+        printf("Empate! Ambas as cartas possuem %d pontos.\n", scoreCarta1);
+    }
 
 return 0;
-}
+
+
