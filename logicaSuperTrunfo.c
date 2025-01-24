@@ -190,7 +190,8 @@ int main() {
     } else {
         printf("Empate! Ambas as cartas possuem %d pontos.\n", scoreCarta1);
     }
-
+    printf("\n#########################################\n");
 return 0;
+}
 
 
